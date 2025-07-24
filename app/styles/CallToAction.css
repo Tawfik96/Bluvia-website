@@ -1,0 +1,377 @@
+/* Call to Action Section */
+.call-to-action {
+  position: relative;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Background Elements */
+.cta-background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(30, 64, 175, 0.1),
+    rgba(59, 130, 246, 0.05)
+  );
+  animation: bgFloat 20s infinite ease-in-out;
+}
+
+.bg-bubble-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -50px;
+  animation-delay: 0s;
+}
+
+.bg-bubble-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -30px;
+  animation-delay: 7s;
+}
+
+.bg-bubble-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  animation-delay: 14s;
+}
+
+.bg-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(30, 64, 175, 0.1),
+    transparent
+  );
+  transform: skewY(-1deg);
+  animation: wave 8s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: skewY(-1deg) translateX(0px);
+  }
+  50% {
+    transform: skewY(-1deg) translateX(20px);
+  }
+}
+
+/* CTA Content */
+.cta-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cta-text {
+  text-align: left;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #1e40af, #0284c7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* CTA Features */
+.cta-features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  color: #1e40af;
+  flex-shrink: 0;
+}
+
+/* CTA Actions */
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.primary-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #1e40af, #0284c7);
+  color: white;
+  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e40af;
+  border: 2px solid #1e40af;
+  backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(30, 64, 175, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.urgent-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.urgent-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.phone-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.phone-button:hover {
+  color: #0284c7;
+  transform: translateX(5px);
+}
+
+.response-time {
+  display: flex;
+  align-items: center;
+}
+
+.response-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cta-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .cta-text {
+    text-align: center;
+  }
+
+  .cta-actions {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    padding: 80px 0;
+  }
+
+  .cta-title {
+    font-size: 2.2rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .primary-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .cta-features {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .phone-button {
+    font-size: 1rem;
+  }
+
+  .bg-bubble-1,
+  .bg-bubble-2,
+  .bg-bubble-3 {
+    opacity: 0.5;
+  }
+}

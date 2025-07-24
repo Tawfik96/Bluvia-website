@@ -1,0 +1,329 @@
+/* 1. Neutrals (for backgrounds, text, or balance)
+White: #ffffff
+
+Light Gray: #f0f0f0, #e5e5e5
+
+Dark Gray: #333333, #4a4a4a
+
+Charcoal: #1f2937
+
+2. Complementary Color (for accents)
+Orange/Peach: #fca652, #ffb366, #ffad60
+
+A warm color like orange balances the cool blue nicely.
+
+3. Analogous Colors (for smooth gradients)
+Sky Blue: #99ccff, #b3e0ff
+
+Teal/Seafoam: #4fb5a3, #5adbb5
+
+4. Accent Colors (for buttons or highlights)
+Light Yellow: #fff9c4
+
+Mint Green: #a8f0d2
+
+Lavender: #d3cce3 */
+
+:root {
+  /* Primary color */
+  --primary: rgb(75, 150, 230);
+  --primary-dark: #09a8a2;
+  --primary-light: #e6fdfd;
+  --testing: #f0f0f0;
+  --testing2: #333333;
+  --testing3: #4a4a4a;
+  --testing4: #1f2937;
+  --testing5: #fca652;
+  --testing6: #ffb366;
+  --testing7: #ffad60;
+  --testing8: #99ccff;
+  --testing9: #b3e0ff;
+  --testing10: #4fb5a3;
+  --testing11: #5adbb5;
+}
+
+.home-wrapper {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  /* background: linear-gradient(to bottom right, #ebf8ff, #c4f1f9); */
+  overflow: hidden;
+}
+
+/* .hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://plus.unsplash.com/premium_photo-1682144316397-21c647d59d71?q=80&w=1171&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+  font-family: "", sans-serif;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-custom-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero-custom-btn:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+} */
+
+/* Projects Section */
+.projects-section {
+  padding: 5rem 2rem;
+  background-color: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(to bottom right, #2563eb, #06b6d4);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #2563eb;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f0f0f0;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background: #fff;
+  padding: 5rem 2rem;
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #1e40af;
+}
+
+/* Reviews Section */
+.testimonials-section {
+  padding: 4rem 2rem;
+  background: #f8f9fc;
+  text-align: center;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-list {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.quote {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #2563eb;
+}

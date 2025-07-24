@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  /* Primary color */
+  --primary: rgb(75, 150, 230);
+  --primary-dark: #09a8a2;
+  --primary-light: #e6fdfd;
+}
+.navbar {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  transition: transform 0.3s ease-in-out;
+}
+nav h1 {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  background: linear-gradient(
+    to right,
+    rgb(5, 94, 190) 0%,
+    var(--primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.navbar-tabs {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-tab {
+  position: relative;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563; /* gray-700 */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-tab:hover {
+  color: var(--primary);
+}
+
+.navbar-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-tab:hover::after,
+.navbar-tab.active::after {
+  width: 100%;
+}
+
+.navbar-tab.active {
+  color: var(--primary);
+}
+
+.navbar-placeholder {
+  width: 40px;
+}

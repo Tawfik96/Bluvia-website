@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* font-family: "Figtree", Sans-serif;
+    font-size: 25px;
+    font-weight: 300; */
+
+.who-section {
+  padding-top: 30px;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-family: "Figtree", Sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+.who-header {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.who-paragraph {
+  font-size: 1.2rem;
+  max-width: 800px;
+  color: black;
+
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.blue-text {
+  color: rgb(75, 150, 230);
+}
+
+.who-content {
+  margin: 10px 0;
+  position: relative;
+}
+
+.corner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.top-left {
+  align-self: flex-start;
+  margin-bottom: -20px;
+}
+
+.bottom-right {
+  align-self: flex-end;
+  margin-top: -20px;
+}
+
+.top-left::before,
+.top-left::after,
+.bottom-right::before,
+.bottom-right::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(75, 150, 230);
+}
+
+.top-left::before {
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 6px;
+}
+
+.top-left::after {
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 40px;
+}
+
+.bottom-right::before {
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 6px;
+}
+
+.bottom-right::after {
+  bottom: 0;
+  right: 0;
+  width: 6px;
+  height: 40px;
+}
