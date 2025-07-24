@@ -117,7 +117,7 @@ const CallToAction: React.FC = () => {
                     fill="none"
                   />
                 </svg>
-                Get Free Quote
+                Learn More
               </button>
 
               <button
@@ -148,7 +148,7 @@ const CallToAction: React.FC = () => {
                       fill="none"
                     />
                   </svg>
-                  Call Now: (555) 123-4567
+                  Call Now: Phone Number
                 </button>
               </div>
 

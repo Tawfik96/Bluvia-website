@@ -2,15 +2,12 @@
 .contact-wrapper {
   font-family: sans-serif;
   color: #1f2937; /* gray-800-ish */
+  background-color: #fff;
 }
 
 .contact-outer {
   padding: 5rem 1.5rem;
-  background: linear-gradient(
-    to bottom right,
-    #eff6ff,
-    #ecfeff
-  ); /* light blue / cyan */
+  background-color: #fff; /* light blue / cyan */
 }
 
 .contact-inner {

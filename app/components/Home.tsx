@@ -40,48 +40,13 @@ const Home: React.FC<HomeProps> = ({ showSection }) => {
         <Reviews />
       </section>
 
-      <section id="testing" className="testing-section">
+      {/* <section id="testing" className="testing-section">
         <Testing />
-      </section>
+      </section> */}
 
       <section id="call-to-action" className="call-to-action-section">
         <CallToAction />
       </section>
-
-      {/* <section className="cta-section">
-        <h2>Ready to Make an Impact on Water Waste?</h2>
-        <p>
-          Contact us today to learn how we can help your city, company, or
-          organization reduce water waste sustainably.
-        </p>
-        <a href="#contact-form" className="cta-button">
-          Get in Touch
-        </a>
-      </section>
-
-      <section id="contact-form" className="contact-form-section">
-        <h2>Send Us a Message</h2>
-        <form>
-          <div className="form-grid">
-            <div>
-              <label>Full Name</label>
-              <input type="text" placeholder="Your name" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input type="email" placeholder="your@email.com" />
-            </div>
-          </div>
-          <div>
-            <label>Message</label>
-            <textarea
-              rows={5}
-              placeholder="Tell us about your project or questions..."
-            ></textarea>
-          </div>
-          <button type="submit">Send Message</button>
-        </form>
-      </section> */}
     </div>
   );
 };

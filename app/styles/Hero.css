@@ -38,17 +38,18 @@
   padding: 20px;
 }
 
-.hero-title {
+.home-hero-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .highlight {
   color: rgb(75, 150, 230);
 }
 
-.hero-subtitle {
+.home-hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -64,5 +65,6 @@
 }
 
 .hero-custom-btn:hover {
-  background-color: #2b9ae0;
+  background-color: #76bfec;
+  box-shadow: #8cc9ef;
 }

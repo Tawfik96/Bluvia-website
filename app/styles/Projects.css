@@ -128,11 +128,12 @@
   color: white;
 }
 
-.project-title {
+.white-project-title {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 12px;
   line-height: 1.3;
+  color: white;
 }
 
 .project-description {

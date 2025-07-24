@@ -110,7 +110,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     <img src={project.image} alt={project.title} />
                     <div className="project-overlay">
                       <div className="project-content">
-                        <h3 className="project-title">{project.title}</h3>
+                        <h3 className="white-project-title">{project.title}</h3>
                         <p className="project-description">
                           {project.description}
                         </p>

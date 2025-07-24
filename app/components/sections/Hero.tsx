@@ -17,17 +17,17 @@ const Hero = () => {
 
       {/* Content */}
       <div className="hero-content">
-        <h1 className="hero-title">
+        <h1 className="home-hero-title">
           Revolutionizing Water{" "}
           <span className="highlight">Waste Management</span>
         </h1>
-        <p className="hero-subtitle">
+        <p className="home-hero-subtitle">
           Sustainable solutions for cleaner water, smarter cities, and a
           healthier planet.
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="hero-custom-btn">
-            View Our Projects
+            Get Started
           </a>
         </div>
       </div>

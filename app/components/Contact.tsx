@@ -1,6 +1,6 @@
 // src/components/sections/Contact.tsx
 import React from "react";
-import "../styles/contact.css"; // adjust path if needed
+import "../styles/Contact.css"; // adjust path if needed
 
 const ContactSection: React.FC = () => {
   return (
