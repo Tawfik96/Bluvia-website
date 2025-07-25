@@ -13,10 +13,10 @@ const Motivation: React.FC<MotivationProps> = ({
   afterImage = "/images/after.png",
   heading = "Why Water Treatment Matters?",
   bulletPoints = [
-    "Achieve your fitness goals faster lorem ipsum dolor sit amet adsrio sdaoir irjeowa teioa tiojeat iontew ioseta etohawe eito editoane awteoiat eoiathewaa",
-    "antioean ointe aioteoa to Build lasting healthy habits so what I want to build now is something like that sda area caoiea tieoara iowneta sodksamre akrmoe ",
-    "Increase your energy and confidence let chatgpt help you with the trarnslation of that dasrejoantie eoiwr wiet onew  oa",
-    "Join thousands of success stories I only awn tot extend the text beatjoen thjere is ont thietonkj dchanf e to frk eome to dp ot eionar ewairoiewm eareaw",
+    " Helps industrial facilities comply with increasingly strict environmental regulations by removing harmful pollutants from wastewater before discharge. ",
+    "Prevents corrosion, scaling, and microbial growth in vital infrastructure like boilers, cooling towers, and piping systems. Proper treatment significantly extends the lifespan of high-value industrial assets.",
+    "Ensures that water used in manufacturing processes meets required purity and quality standards, which is especially critical in sectors like food processing, electronics, and pharmaceuticals. ",
+    "Enables wastewater recycling and recovery of valuable resources such as heat, chemicals, or metals. By reducing dependency on freshwater sources and minimizing waste disposal costs.",
   ],
 }) => {
   const [sliderPosition, setSliderPosition] = useState(50);

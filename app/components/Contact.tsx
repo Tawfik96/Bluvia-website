@@ -3,6 +3,35 @@ import React from "react";
 import "../styles/Contact.css"; // adjust path if needed
 
 const ContactSection: React.FC = () => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    const fullName =
+      (document.getElementById("fullName") as HTMLInputElement | null)?.value ||
+      "";
+    const email =
+      (document.getElementById("email") as HTMLInputElement | null)?.value ||
+      "";
+    const company =
+      (document.getElementById("company") as HTMLInputElement | null)?.value ||
+      "";
+    const message =
+      (document.getElementById("message") as HTMLTextAreaElement | null)
+        ?.value || "";
+
+    const phoneNumber = "201001234567"; // Replace with your WhatsApp number (in international format, no +)
+
+    const whatsappMessage = `Hello, my name is ${fullName}.
+Email: ${email}
+Company: ${company}
+Message: ${message}`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
   return (
     <div className="contact-wrapper">
       <section className="contact-outer">
@@ -51,9 +80,8 @@ const ContactSection: React.FC = () => {
                   <div>
                     <h3>Address</h3>
                     <p>
-                      New Cairo, ISA
+                      Elsaff, Giza Egypt
                       <br />
-                      (Final site TBD)
                     </p>
                   </div>
                 </li>
@@ -78,7 +106,7 @@ const ContactSection: React.FC = () => {
                   </span>
                   <div>
                     <h3>Phone</h3>
-                    <p>+20 111 092 6911</p>
+                    <p>+20 1016409170</p>
                   </div>
                 </li>
 
@@ -110,7 +138,7 @@ const ContactSection: React.FC = () => {
                   </span>
                   <div>
                     <h3>Email</h3>
-                    <p>info@bluvia.com</p>
+                    <p>dr.ayman.youssef@bluvia-egypt.com</p>
                   </div>
                 </li>
 
@@ -134,7 +162,7 @@ const ContactSection: React.FC = () => {
                   </span>
                   <div>
                     <h3>WhatsApp</h3>
-                    <p>+20 111 092 6911</p>
+                    <p>+20 1016409170</p>
                   </div>
                 </li>
               </ul>
@@ -166,13 +194,7 @@ const ContactSection: React.FC = () => {
             {/* Contact Form */}
             <div className="contact-form-col">
               <h2>Send Us a Message</h2>
-              <form
-                className="contact-form"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert("Message sent successfully!");
-                }}
-              >
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="contact-form-group">
                   <label htmlFor="fullName">Full Name</label>
                   <input

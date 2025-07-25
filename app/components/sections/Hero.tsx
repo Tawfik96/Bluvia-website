@@ -26,7 +26,11 @@ const Hero = () => {
           healthier planet.
         </p>
         <div className="hero-buttons">
-          <a href="#projects" className="hero-custom-btn">
+          <a
+            href="https://wa.me/+201016409170"
+            target="_blank"
+            className="hero-custom-btn"
+          >
             Get Started
           </a>
         </div>

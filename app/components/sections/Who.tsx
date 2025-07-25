@@ -12,10 +12,11 @@ const WhoSection: React.FC = () => {
         <span className="blue-text">clean water</span> is the foundation of
         life. Our mission is to revolutionize{" "}
         <span className="blue-text">industrial water treatment</span> by
-        providing sustainable and efficient solutions. Through innovation and
-        dedication, we aim to ensure that. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Unde tempora eligendi placeat quidem,
-        obcaecati veritatis corporis omnis similique architecto asperiores?{" "}
+        providing sustainable and efficient solutions.Our advanced technologies
+        are designed to meet the evolving needs of diverse sectors, from
+        manufacturing to energy production. Together, we can build a cleaner,
+        safer, and more water-resilient world. Through innovation and
+        dedication, we aim to ensure that{" "}
         <span className="blue-text">water resources</span> are preserved and
         optimized for a better tomorrow.
       </p>

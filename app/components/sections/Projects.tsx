@@ -7,8 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  technologies: string[];
-  link?: string;
+  risks?: string[];
 }
 
 interface ProjectsProps {
@@ -19,39 +18,75 @@ const Projects: React.FC<ProjectsProps> = ({
   projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Pharmaceutical Industry",
       description:
-        "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      image: "/images/before.png",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
+        "Wastewater from pharmaceutical factories contains active chemical compounds, antibiotics, and complex organic substances that require advanced treatment to prevent environmental and public health risks.",
+      image: "/images/pharma.jpg",
+      risks: [
+        "Groundwater and surface water contamination",
+        "Ecosystem disruption due to drug residues",
+        "Increased antibiotic resistance in bacteria",
+      ],
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Textile Industry ",
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/images/team.jpg",
-      technologies: ["Vue.js", "Firebase", "Vuetify", "Socket.io"],
-      link: "#",
+        "Textile wastewater includes dyes, chemical fixatives, and heavy metals from bleaching and dyeing. Without treatment, it severely impacts aquatic life and soil quality.",
+      image: "/images/textile.jpg",
+      risks: [
+        "Pollution of rivers and lakes with toxic dyes",
+        "Oxygen depletion in water bodies",
+        "Chemical accumulation in soil and groundwater",
+      ],
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Food Processing Industry ",
       description:
-        "A responsive weather dashboard that displays current weather conditions, forecasts, and interactive maps using multiple weather APIs.",
-      image: "/images/story.jpg",
-      technologies: ["JavaScript", "API Integration", "Chart.js", "CSS Grid"],
-      link: "#",
+        "Food industry wastewater is rich in organic matter, fats, oils, and biological residues. If untreated, it leads to odor, algal overgrowth, and contamination of water resources.",
+      image: "/images/food2.jpeg",
+      risks: [
+        "Strong odors due to organic decomposition",
+        "Algae blooms from nutrient overload",
+        "Contamination of drinking and irrigation water",
+      ],
     },
     {
       id: 4,
-      title: "Social Media Analytics",
+      title: "Paper and Cardboard Industry ",
       description:
-        "An analytics dashboard for social media metrics with data visualization, trend analysis, and automated reporting capabilities.",
-      image: "/images/after.png",
-      technologies: ["Python", "Django", "D3.js", "PostgreSQL"],
-      link: "#",
+        "This wastewater contains organic pollutants, cellulose residues, and bleaching agents, which contribute to visual pollution and biodiversity loss if not treated properly.",
+      image: "/images/paper.jpg",
+      risks: [
+        "Visual and chemical pollution of water bodies",
+        "Decline in water quality",
+        "Harm to aquatic biodiversity",
+      ],
+    },
+    {
+      id: 5,
+      title: "Metal Plating Industry ",
+      description:
+        "Wastewater from metal finishing contains heavy metals like chromium, lead, and strong acids or bases. It poses high toxicity and long-term damage to infrastructure and ecosystems.",
+      image: "/images/metal2.jpg",
+      risks: [
+        "Toxicity to aquatic life",
+        "Heavy metal bioaccumulation",
+        "Corrosion of public drainage systems",
+      ],
+    },
+    {
+      id: 6,
+      title: "Domestic Sewage",
+      description:
+        "Generated from daily human activities, this wastewater contains organic matter, pathogens, nitrogen, and phosphorus. Proper treatment is crucial to avoid disease spread and environmental harm.",
+      image: "/images/sewage2.jpg",
+      risks: [
+        "Spread of infectious diseases",
+        "Pollution of groundwater and surface water",
+        "Ecological imbalance from high organic load",
+      ],
     },
   ],
 }) => {
@@ -76,7 +111,7 @@ const Projects: React.FC<ProjectsProps> = ({
   return (
     <section className="projects-section">
       <div className="projects-container">
-        <h2 className="projects-title">Our Projects</h2>
+        <h2 className="projects-title">Industries </h2>
 
         <div className="carousel-container">
           <button
@@ -114,20 +149,30 @@ const Projects: React.FC<ProjectsProps> = ({
                         <p className="project-description">
                           {project.description}
                         </p>
+                        {project.risks && project.risks.length > 0 && (
+                          <ul className="project-risks">
+                            <h4>Risks</h4>
+                            {project.risks.map((risk, riskIndex) => (
+                              <li key={riskIndex}>{risk}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     </div>
                   </div>
-                  <div className="project-content">
+                  {/* <div className="project-content">
                     <h3 className="project-title">{project.title}</h3>
                     <p className="project-description">{project.description}</p>
-                    <div className="project-technologies">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+
+                    {project.risks && project.risks.length > 0 && (
+                      <ul className="project-risks">
+                        <h4>Risks:</h4>
+                        {project.risks.map((risk, riskIndex) => (
+                          <li key={riskIndex}>{risk}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div> */}
                 </div>
               ))}
             </div>
