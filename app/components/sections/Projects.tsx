@@ -1,6 +1,6 @@
 // components/Projects.tsx (or adjust path as needed)
 import "./../../styles/Projects.css"; // Ensure this path is correct
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface Project {
   id: number;
@@ -91,8 +91,21 @@ const Projects: React.FC<ProjectsProps> = ({
   ],
 }) => {
   const [currentIndex, setCurrentIndex] = useState(1);
-  const cardsPerView = 3;
+  const [cardsPerView, setCardsPerView] = useState(3);
   const totalSlides = Math.max(0, projects.length - cardsPerView + 1);
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      const width = window.innerWidth;
+      if (width <= 480) setCardsPerView(1);
+      else if (width <= 1024) setCardsPerView(2);
+      else setCardsPerView(3);
+    };
+
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -135,9 +148,14 @@ const Projects: React.FC<ProjectsProps> = ({
               className="carousel-track"
               style={{
                 transform: `translateX(-${
-                  currentIndex * (100 / cardsPerView)
+                  (currentIndex * 100) / cardsPerView
                 }%)`,
               }}
+              // style={{
+              //   transform: `translateX(-${
+              //     currentIndex * (100 / cardsPerView)
+              //   }%)`,
+              // }}
             >
               {projects.map((project, index) => (
                 <div key={project.id} className="project-card">

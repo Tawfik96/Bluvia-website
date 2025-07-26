@@ -9,8 +9,8 @@ interface MotivationProps {
 }
 
 const Motivation: React.FC<MotivationProps> = ({
-  beforeImage = "/images/before.png",
-  afterImage = "/images/after.png",
+  beforeImage = "/images/after_jar.jpg",
+  afterImage = "/images/before_jar.jpg",
   heading = "Why Water Treatment Matters?",
   bulletPoints = [
     " Helps industrial facilities comply with increasingly strict environmental regulations by removing harmful pollutants from wastewater before discharge. ",
